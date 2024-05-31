@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeonji Baek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <header>
+        <h1>Portfolio</h1>
+        <h3>Yeonji Baek / Desktop / Personal / Portfolio</h3>
+    </header> -->
+    <div class="container">
+        <div class="tab_box">
+            <button class="tab_btn active">Yeonji Baek</button>
+            <button class="tab_btn">Projects</button>
+            <button class="tab_btn">Resume</button>
+            <button class="tab_btn">About</button>
+            <div class="line"></div>
+        </div>
+        <div class="content_box">
+            <div class="content active">
+                <h2>Yeonji Baek</h2>
+                <p>
+                    <img src="images/yeonji4.jpg" alt="portrait image of yeonji baek" style="width:300px;height:200px;"> <br>
+                    Rising junior @ Carnegie Mellon University <br>
+                    Majoring in Statistics and Machine Learning <br>
+                    Minoring in
+                    <ul>
+                        <li>Business Analytics and Optimization</li>
+                        <li>Human-Computer Interaction</li>
+                        <li>Computer Science</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">Email</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/yeonji-baek/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">GitHub</a>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content">
+                <h2>Projects</h2>
+                <p>
+                    im gonna list all thesdfaasfasdfasdasgasfasfasf
+                </p>
+            </div>
+
+            <div class="content">
+                <h2>Resume</h2>
+                <p>
+                    put a pdf here
+                </p>
+            </div>
+            
+            <div class="content">
+                <h2>About</h2>
+                <p>
+                    Hello! My name is Yeonji Baek, and I am a rising junior studying Statistics and Machine Learning. My ........ wahtevreadfasdf im just writing lmaoooo but this is my introduction page lowkeyyyyyyy
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab_btn');
+        const contents = document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e)=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line');
+            line.style.width = e.target.offsetWidth + "px";
+            line.style.left = e.target.offsetLeft + "px";
+
+            contents.forEach(content=>{content.classList.remove('active')});
+            contents[index].classList.add('active');
+            })
+        })
+    </script>
+</body>
+</html>
