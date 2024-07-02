@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* adjusting the background */
 body{
     background-color: #deeeff;
     display: flex;
@@ -12,14 +13,22 @@ body{
     align-items: center;
     height: 100vh;
 }
+
+/* adjusting the white box itself */
 .container{
-    width: 1200px;
-    height: 650px;
+    width: 80%;
+    height: 88%;
+    max-width: 1500px;
+    max-height: 820px;
     background-color: white;
-    padding: 30px;
+    padding: 40px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    overflow: auto;
+    white-space: normal;
 }
+
+/* this controls how the buttons on the top will be displayed */
 .tab_box{
     width: 100%;
     display: flex;
@@ -43,8 +52,21 @@ body{
     color: #7360ff;
 }
 
+/* this creates the line under the button we click */
+.line{
+    position: absolute;
+    top: 62px;
+    left: 120px;
+    width: 90px;
+    height: 5px;
+    background-color: #7360ff;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+/* this will show the content when the respective button is pressed */
 .content_box{
-    padding: 20px;
+    padding: 35px;
 }
 .content_box .content{
     display: none;
@@ -54,22 +76,49 @@ body{
     from{transform: translateX(50px); opacity: 0;}
     to{transform: translateX(0px); opacity: 1;}
 }
-
 .content_box .content.active{
     display: block;
 }
 .content_box .content h2{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 
-.line{
-    position: absolute;
-    top: 62px;
-    left: 110px;
-    width: 90px;
-    height: 5px;
-    background-color: #7360ff;
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home-image{
+    width: 35%;
+    height: auto;
     border-radius: 10px;
-    transition: all .3s ease-in-out;
+    margin-right: 10px;
+}
+.home-text{
+    font-size: 20px;
+}
+
+
+.icon {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.icon li a {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 5px;
+    font-size: 50px;
+}
+
+
+.about-image {
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 40%;
 }
